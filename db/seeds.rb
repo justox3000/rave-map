@@ -127,13 +127,16 @@ party4.save!
 party5 = Party.new(
   title: "Tom-Tom Club feat. LLEE TOTO, Maria Wildeis & Merkush",
   music_genre: "House",
-  location: "Jaki",
+  location: "JAKI",
   description: "Was wäre eine Stadt, eine Szene oder ein Club ohne lokale DJs? Die Tom-Tom Club Reihe bietet Local Heroes und neuen Talenten eine Bühne und ein DJ Booth im Club JAKI. Tom-Tom Club ist ein offener Raum für Austausch, Entdeckungen und grenzenlose, genrefreie musikalische Abenteuer - kurz gesagt, eure neue Lieblings-Clubnacht.
 
   Jeden Samstag, von 23:30 Uhr bis spät in die Nacht - alle Musikliebhaber:innen, Tänzer:innen, Zuhörer:innen, Freaks und Nicht-Freaks sind willkommen!",
   date: "2022-09-10",
   starttime: "23:30"
 )
+
+# picture: https://imgproxy.ra.co/_/quality:100/w:1500/rt:fill/plain/https://images.ra.co/6ba49198550a1883282b88cd5a1067a3e7fc2f09.jpg
+
 party5.user = user4
 party5.save!
 
