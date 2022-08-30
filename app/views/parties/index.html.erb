@@ -1,0 +1,12 @@
+<h1>Parties</h1>
+<br>
+<% @parties.each do |party| %>
+  <div>
+    <h3><%= party.title %></h3>
+    <p><strong>Genre: </strong><%= party.music_genre %></p>
+    <p><strong>Location: </strong><%= party.location %></p>
+    <p><strong>Description: </strong><%= party.description %></p>
+    <p><strong>Date: </strong><%= party.date %></p>
+    <p><strong>Start: </strong><%= party.starttime %></p>
+  </div>
+<% end %>
