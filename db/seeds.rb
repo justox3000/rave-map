@@ -8,7 +8,7 @@ User.destroy_all
 puts "Creating 5 random users..."
 
 user1 = User.new(
-  nickname: "testuser",
+  username: "testuser",
   email: "test@test.com",
   password: "testtest"
 )
@@ -34,7 +34,7 @@ puts "Create 5 random parties..."
 
 party1 = Party.new(
   title: Faker::Movies::Tron.tagline,
-  musicgenre: "House",
+  music_genre: "House",
   location: "Gewölbe",
   description: Faker::Lorem.sentence(word_count: 7),
   date: Faker::Date.forward(days: 23),
@@ -45,7 +45,7 @@ party1.save!
 
 party2 = Party.new(
   title: Faker::Movies::Tron.tagline,
-  musicgenre: "Techno",
+  music_genre: "Techno",
   location: "Helios 37",
   description: Faker::Lorem.sentence(word_count: 7),
   date: Faker::Date.forward(days: 23),
@@ -56,7 +56,7 @@ party2.save!
 
 party3 = Party.new(
   title: Faker::Movies::Tron.tagline,
-  musicgenre: "Psytrance",
+  music_genre: "Psytrance",
   location: "Artheater",
   description: Faker::Lorem.sentence(word_count: 7),
   date: Faker::Date.forward(days: 23),
@@ -67,7 +67,7 @@ party3.save!
 
 party4 = Party.new(
   title: Faker::Movies::Tron.tagline,
-  musicgenre: "Techno",
+  music_genre: "Techno",
   location: "Artheater",
   description: Faker::Lorem.sentence(word_count: 7),
   date: Faker::Date.forward(days: 23),
@@ -78,7 +78,7 @@ party4.save!
 
 party5 = Party.new(
   title: Faker::Movies::Tron.tagline,
-  musicgenre: "Techno",
+  music_genre: "Techno",
   location: "Odonien",
   description: Faker::Lorem.sentence(word_count: 7),
   date: Faker::Date.forward(days: 23),
