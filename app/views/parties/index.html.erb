@@ -1,0 +1,12 @@
+<div class="card-party">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+<% @parties.each do |party| %>
+  <div class="card-party-infos">
+    <h3><%= party.title %></h3>
+    <%# <p><strong>Genre: </strong><%= party.music_genre %>
+    <p><strong>Location: </strong><%= party.location %></p>
+    <%# <p><strong>Description: </strong><%= party.description %>
+    <p><strong>Date: </strong><%= party.date %></p>
+    <%# <p><strong>Start: </strong><%= party.starttime.strftime('%b %e, %l:%M %p') %>
+  </div>
+<% end %>
