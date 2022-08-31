@@ -10,4 +10,10 @@ class PartiesController < ApplicationController
       lng: @party.longitude
     }]
   end
+
+  def favorite
+    @party = Party.find(params[:id])
+    current_user.favorite(@party)
+    redirect_to party_path(@party)
+  end
 end

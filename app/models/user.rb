@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  acts_as_favoritor
   has_many :parties
   has_many :comments
   has_many :attendings

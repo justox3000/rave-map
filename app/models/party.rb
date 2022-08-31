@@ -1,4 +1,5 @@
 class Party < ApplicationRecord
+  acts_as_favoritable
   has_one_attached :photo
   belongs_to :user
   validates :title, presence: true
