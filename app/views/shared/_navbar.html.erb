@@ -10,15 +10,18 @@
 
     <div class="collapse navbar-collapse ms-2 mt-2" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto border">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Log in</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Sign in</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Sign out</a>
-          </li>
+        <li class="nav-item active">
+          <%= link_to "Home", root_path,class: "nav-link" %>
+        </li>
+        <li class="nav-item login">
+          <%= link_to "Log In", new_user_session_path,class: "nav-link" %>
+        </li>
+        <li class="nav-item signup">
+          <%= link_to "Sign up", new_user_registration_path,class: "nav-link" %>
+        </li>
+        <li class="nav-item logout">
+          <%= link_to "Log out", destroy_user_session_path,class: "nav-link" %>
+        </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Map</a>
           </li>
