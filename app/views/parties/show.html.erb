@@ -6,6 +6,15 @@
 <p><%= @party.starttime.strftime("%l:%M %p") %></p>
 <p><%= @party.location %></p>
 <p><%= @party.description %></p>
+<% if current_user.favorited?(@party) %>
+  <%= link_to favorite_party_path, class: "btn btn-ghost" do %>
+    <i class="fa-regular fa-bookmark"></i>
+  <% end %>
+<% else %>
+  <%= link_to favorite_party_path, class: "btn btn-ghost" do%>
+    <i class="fa-solid fa-bookmark"></i>
+  <% end %>
+<% end %>
 <div style="width: 100%; height: 600px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
