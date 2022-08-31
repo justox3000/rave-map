@@ -1,0 +1,6 @@
+<%= form_with url: parties_path, method: :get, html: { class: "mb-4" } do |f| %>
+    <%= f.text_field :query,
+                     class: "form-control",
+                     placeholder: "",
+                     value: params[:query] %>
+                     <% end %>

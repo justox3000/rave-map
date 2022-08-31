@@ -6,4 +6,11 @@ class Party < ApplicationRecord
   validates :description, presence: true
   validates :date, presence: true
   validates :starttime, presence: true
+
+  include PgSearch::Model
+  pg_search_scope :party_search,
+                  against: [:title, :music_genre, :location],
+                  using: {
+                    tsearch: { prefix: true },
+                  }
 end
