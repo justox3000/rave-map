@@ -1,0 +1,8 @@
+<h1><%= @party.title %></h1>
+<br>
+<%= cl_image_tag @party.photo.key, width: 800, crop: :fit, class: "rounded" %>
+<p><strong>Genre: </strong><%= @party.music_genre %></p>
+<p><%= @party.date.strftime("%a %e %B %Y") %></p>
+<p><%= @party.starttime.strftime("%l:%M %p") %></p>
+<p><%= @party.location %></p>
+<p><%= @party.description %></p>
