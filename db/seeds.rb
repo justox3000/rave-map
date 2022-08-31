@@ -1,9 +1,17 @@
+require 'open-uri'
+
 puts "Deleting the old Database..."
 
 Attending.destroy_all
 Comment.destroy_all
 Party.destroy_all
 User.destroy_all
+
+url1 = File.open(Rails.root.join('db/images/electroniclove.png'))
+url2 = File.open(Rails.root.join('db/images/rememberthefuture.jpg'))
+url3 = File.open(Rails.root.join('db/images/pollerwiesenbootzwei.jpg'))
+url4 = File.open(Rails.root.join('db/images/precey.png'))
+url5 = File.open(Rails.root.join('db/images/tomtomclub.jpg'))
 
 puts "Creating 5 random users..."
 
@@ -30,7 +38,7 @@ user5 = User.new(
   Faker::Internet.user
 )
 
-puts "Create 5 random parties..."
+puts "Create 5 parties..."
 
 party1 = Party.new(
   title: "electronic love feat. DJ MELL G (Juicy Gang)",
@@ -57,6 +65,7 @@ party1 = Party.new(
   starttime: "23:00"
 )
 party1.user = user1
+party1.photo.attach(io: url1, filename: "p1.png", content_type: "image/png")
 party1.save!
 
 party2 = Party.new(
@@ -73,6 +82,7 @@ party2 = Party.new(
   starttime: "23:00"
 )
 party2.user = user1
+party2.photo.attach(io: url2, filename: "p1.png", content_type: "image/png")
 party2.save!
 
 party3 = Party.new(
@@ -109,6 +119,7 @@ party3 = Party.new(
   starttime: "11:45"
 )
 party3.user = user2
+party3.photo.attach(io: url3, filename: "p3.png", content_type: "image/png")
 party3.save!
 
 party4 = Party.new(
@@ -122,6 +133,7 @@ party4 = Party.new(
   starttime: "23:30"
 )
 party4.user = user1
+party4.photo.attach(io: url4, filename: "p4.png", content_type: "image/png")
 party4.save!
 
 party5 = Party.new(
@@ -138,6 +150,7 @@ party5 = Party.new(
 # picture: https://imgproxy.ra.co/_/quality:100/w:1500/rt:fill/plain/https://images.ra.co/6ba49198550a1883282b88cd5a1067a3e7fc2f09.jpg
 
 party5.user = user4
+party5.photo.attach(io: url5, filename: "p5.png", content_type: "image/png")
 party5.save!
 
 puts "Created 5 users and 5 parties..."
