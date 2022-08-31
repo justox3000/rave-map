@@ -5,5 +5,9 @@ class PartiesController < ApplicationController
 
   def show
     @party = Party.find(params[:id])
+    @markers = [{
+      lat: @party.latitude,
+      lng: @party.longitude
+    }]
   end
 end

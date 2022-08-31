@@ -62,7 +62,8 @@ party1 = Party.new(
 
   Solltet ihr sexistisches, nationalistisches oder diskriminierendes Gedankengut in jedweder Form in euch tragen, so bitten wir euch, von unserem Rave fernzubleiben. Der Schutz von diskriminierungsfreien Räumen - dazu gehört auch unsere Veranstaltung - hat für uns oberste Priorität. ",
   date: "2022-09-09",
-  starttime: "23:00"
+  starttime: "23:00",
+  address: "Heliosstraße 37, 50825 Köln"
 )
 party1.user = user1
 party1.photo.attach(io: url1, filename: "p1.png", content_type: "image/png")
@@ -79,7 +80,8 @@ party2 = Party.new(
   Unabhängig von Herkunft, Geschlecht, sexueller Orientierung oder Religion erwarten wir von all unseren Gästen einen respektvollen Umgang miteinander. Homophobie, sexistisches oder rassistisches Verhalten sowie jegliche andere Form von Diskriminierung, Gewalt oder Beleidigungen haben im Gewölbe keinen Platz. Solltet ihr Zeug:innen von unangemessenem Verhalten werden oder selbst in eine unangenehme Lage kommen, wendet euch bitte jederzeit an unser Personal.
   Bei verlorengegangenen Gegenständen bitte eine Mail an lostandfound@gewoelbe.net schreiben",
   date: "2022-09-09",
-  starttime: "23:00"
+  starttime: "23:00",
+  address: "Hans-Böckler-Platz 2, 50672 Köln"
 )
 party2.user = user1
 party2.photo.attach(io: url2, filename: "p1.png", content_type: "image/png")
@@ -88,7 +90,7 @@ party2.save!
 party3 = Party.new(
   title: "PollerWiesen Boot Zwei 2022",
   music_genre: "Techno",
-  location: "Artheater",
+  location: "MS Rheinenergie",
   description: "Join our unique 7h daytime cruise along the Rhine on the MS RheinEnergie, Europe`s biggest event-ship. Get lost in time and space with scenic wideness, captivating industry and the vastness of the summer sky...
 
   _
@@ -116,7 +118,8 @@ party3 = Party.new(
   _
   ",
   date: "2022-09-11",
-  starttime: "11:45"
+  starttime: "11:45",
+  address: "Rheinstraße, 50996 Köln, Germany"
 )
 party3.user = user2
 party3.photo.attach(io: url3, filename: "p3.png", content_type: "image/png")
@@ -130,7 +133,8 @@ party4 = Party.new(
 
   JAKI's entrance is not barrier-free.",
   date: "2022-09-09",
-  starttime: "23:30"
+  starttime: "23:30",
+  address: "Venloer Str. 40, 50672 Köln"
 )
 party4.user = user1
 party4.photo.attach(io: url4, filename: "p4.png", content_type: "image/png")
@@ -144,7 +148,8 @@ party5 = Party.new(
 
   Jeden Samstag, von 23:30 Uhr bis spät in die Nacht - alle Musikliebhaber:innen, Tänzer:innen, Zuhörer:innen, Freaks und Nicht-Freaks sind willkommen!",
   date: "2022-09-10",
-  starttime: "23:30"
+  starttime: "23:30",
+  address: "Venloer Str. 40, 50672 Köln"
 )
 
 # picture: https://imgproxy.ra.co/_/quality:100/w:1500/rt:fill/plain/https://images.ra.co/6ba49198550a1883282b88cd5a1067a3e7fc2f09.jpg
