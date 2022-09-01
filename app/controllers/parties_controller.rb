@@ -1,16 +1,17 @@
 class PartiesController < ApplicationController
   def index
     @parties = Party.all
-if params[:query].present?
+    if params[:query].present?
       @parties = @parties.party_search(params[:query])
     end
+    @parties = @parties.where(date: params[:date]) if params[:date].present?
   end
 
   def show
     @party = Party.find(params[:id])
     @markers = [{
       lat: @party.latitude,
-      lng: @party.longitude
+      lng: @party.longitude,
     }]
   end
 
