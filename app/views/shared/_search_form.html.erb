@@ -1,6 +1,13 @@
-<%= form_with url: parties_path, method: :get, html: { class: "mb-4" } do |f| %>
+<%= form_with url: parties_path, method: :get, html: { class: "mb-2" } do |f| %>
     <%= f.text_field :query,
                      class: "form-control",
                      placeholder: "",
                      value: params[:query] %>
-                     <% end %>
+
+
+    <%= f.date_field :date,
+                     class: "form-control",
+                     placeholder: "",
+                     value: params[:date] %>
+    <%= f.submit "search" %>
+<% end %>

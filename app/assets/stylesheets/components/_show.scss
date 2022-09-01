@@ -1,0 +1,37 @@
+.card-show-container {
+  overflow: hidden;
+  background: black;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  justify-content: center;
+  width: 100%;
+  padding: 16px;
+  color: white;
+
+  img {
+  height: 230px;
+  width: 100%;
+  object-fit: cover;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .card-description {
+    font-size: 12px;
+    opacity: .7;
+    margin: 0;
+  }
+}
+
+  .card-show-infos {
+    margin-top: 8px;
+
+    p {
+    font-size: 17px;
+    margin: 3px;
+    }
+  }

@@ -1,21 +1,31 @@
-<h1><%= @party.title %></h1>
-<br>
-<%= cl_image_tag @party.photo.key, width: 800, crop: :fit, class: "rounded" %>
-<p><strong>Genre: </strong><%= @party.music_genre %></p>
-<p><%= @party.date.strftime("%a %e %B %Y") %></p>
-<p><%= @party.start_time.strftime("%l:%M %p") %></p>
-<p><%= @party.location %></p>
-<p><%= @party.description %></p>
-<% if current_user.favorited?(@party) %>
-  <%= link_to favorite_party_path, class: "btn btn-ghost" do %>
-    <i class="fa-regular fa-bookmark"></i>
-  <% end %>
-<% else %>
-  <%= link_to favorite_party_path, class: "btn btn-ghost" do%>
-    <i class="fa-solid fa-bookmark"></i>
-  <% end %>
-<% end %>
-<div style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
+<%= render "shared/navbar" %>
+<%= render "shared/search_form" %>
+<div class="card-show-container">
+  <h1><%= @party.title %></h1>
+  <%= cl_image_tag @party.photo.key, width: 800, crop: :fit, class: "rounded" %>
+  <div class="card-show-infos">
+    <p><strong>Genre: </strong><%= @party.music_genre %></p>
+    <p>Date<%= @party.date.strftime("%a %e %B %Y") %></p>
+    <p>Start Time<%= @party.starttime.strftime("%l:%M %p") %></p>
+    <p>Address: <%= @party.location %></p>
+    <br>
+    <p>Description</p>
+  </div>
+    <p class="card-description"><%= @party.description %></p>
+    <% if current_user.favorited?(@party) %>
+      <%= link_to favorite_party_path, class: "btn btn-light my-3" do %>
+        <i class="fa-regular fa-bookmark"></i>
+      <% end %>
+    <% else %>
+      <%= link_to favorite_party_path, class: "btn btn-ghost my-3" do%>
+        <i class="fa-solid fa-bookmark"></i>
+      <% end %>
+    <% end %>
+  <div style="width: 100%; height: 400px;"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+</div>
+
