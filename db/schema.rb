@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema[7.0].define(version: 2022_08_31_145438) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_01_135412) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -89,7 +88,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_31_145438) do
     t.string "location"
     t.text "description"
     t.date "date"
-    t.time "starttime"
     t.time "endtime"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -97,6 +95,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_31_145438) do
     t.string "address"
     t.float "latitude"
     t.float "longitude"
+    t.datetime "start_time"
     t.index ["user_id"], name: "index_parties_on_user_id"
   end
 

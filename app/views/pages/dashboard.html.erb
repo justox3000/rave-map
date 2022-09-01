@@ -1,0 +1,12 @@
+<h1>Dashboard</h1>
+<br>
+<div class="Calendar">
+  <%= month_calendar(events: @parties) do |date, parties| %>
+    <%= date %>
+    <% parties.each do |party| %>
+      <div class="party">
+        <p><%= party.title %></p>
+      </div>
+    <% end %>
+  <% end %>
+</div>
