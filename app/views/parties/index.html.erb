@@ -1,19 +1,19 @@
-<<<<<<< HEAD
-  <%= render "shared/navbar" %>
-=======
+
+<%= render "shared/navbar" %>
+
 <%= render "shared/search_form" %>
->>>>>>> 207d873a334c4326623b381c924b721f63529984
+
 <div class="card-party">
   <% @parties.each do |party| %>
     <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
     <div class="card-party-infos">
       <h3><%= party.title %></h3>
-      <%# <p><strong>Genre: </strong><%= party.music_genre %>
+      <% # <p><strong>Genre: </strong><%= party.music_genre %>
       <div class="card-details">
         <p><strong>Location: </strong><%= party.location %></p>
-        <%# <p><strong>Description: </strong><%= party.description %>
+        <% # <p><strong>Description: </strong><%= party.description %>
         <p><strong>Date: </strong><%= party.date %></p>
-        <%# <p><strong>Start: </strong><%= party.starttime.strftime('%b %e, %l:%M %p') %>
+        <% # <p><strong>Start: </strong><%= party.starttime.strftime('%b %e, %l:%M %p') %>
       </div>
     </div>
   <% end %>

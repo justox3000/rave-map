@@ -2,10 +2,12 @@
   <%= render "shared/navbar" %>
   <div class="banner">
     <h1>Rave Map</h1>
-      <%= simple_form_for :search, method: "get" do |f| %>
-        <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
-        <%= f.text_field :query, placeholder: "location", class: "form-control" %>
-        <%= f.button :submit, "Go", class: "btn btn-dark d-flex align-items-end flex-column" %>
-      <% end %>
+      <% #= simple_form_for :search, method: "get" do |f| %>
+        <% #= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <% #= f.text_field :query, placeholder: "location", class: "form-control" %>
+        <% #= f.button :submit, "Go", class: "btn btn-dark d-flex align-items-end flex-column" %>
+      <% # end %>
+
+      <%= render "shared/search_form" %>
   </div>
 </div>

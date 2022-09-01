@@ -12,12 +12,10 @@ class Party < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
-
   include PgSearch::Model
   pg_search_scope :party_search,
-                  against: [:title, :music_genre, :location],
+                  against: [:title, :music_genre, :location, :date],
                   using: {
                     tsearch: { prefix: true },
                   }
-
 end
