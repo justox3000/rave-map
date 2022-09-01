@@ -6,6 +6,7 @@
         <% #= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
         <% #= f.text_field :query, placeholder: "location", class: "form-control" %>
         <% #= f.button :submit, "Go", class: "btn btn-dark d-flex align-items-end flex-column" %>
+
       <% # end %>
 
       <%= render "shared/search_form" %>
