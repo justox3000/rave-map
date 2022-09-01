@@ -1,13 +1,15 @@
-<%= form_with url: parties_path, method: :get, html: { class: "mb-2" } do |f| %>
+<%= form_with url: parties_path, method: :get, html: { class: "mx-2 d-flex" } do |f| %>
     <%= f.text_field :query,
-                     class: "form-control",
-                     placeholder: "",
+                     class: "search-form-input",
+                     placeholder: "Location",
                      value: params[:query] %>
 
 
     <%= f.date_field :date,
-                     class: "form-control",
+                     class: "search-form-input",
                      placeholder: "",
                      value: params[:date] %>
-    <%= f.submit "search" %>
+    <button name="button" type="submit" class="btn btn-dark">
+      <i class="fas fa-search"></i>
+    </button>
 <% end %>
