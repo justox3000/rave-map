@@ -62,7 +62,7 @@ party1 = Party.new(
 
   Solltet ihr sexistisches, nationalistisches oder diskriminierendes Gedankengut in jedweder Form in euch tragen, so bitten wir euch, von unserem Rave fernzubleiben. Der Schutz von diskriminierungsfreien Räumen - dazu gehört auch unsere Veranstaltung - hat für uns oberste Priorität. ",
   date: "2022-09-09",
-  starttime: "23:00",
+  start_time: "2022-09-09 23:00",
   address: "Heliosstraße 37, 50825 Köln"
 )
 party1.user = user1
@@ -80,7 +80,7 @@ party2 = Party.new(
   Unabhängig von Herkunft, Geschlecht, sexueller Orientierung oder Religion erwarten wir von all unseren Gästen einen respektvollen Umgang miteinander. Homophobie, sexistisches oder rassistisches Verhalten sowie jegliche andere Form von Diskriminierung, Gewalt oder Beleidigungen haben im Gewölbe keinen Platz. Solltet ihr Zeug:innen von unangemessenem Verhalten werden oder selbst in eine unangenehme Lage kommen, wendet euch bitte jederzeit an unser Personal.
   Bei verlorengegangenen Gegenständen bitte eine Mail an lostandfound@gewoelbe.net schreiben",
   date: "2022-09-09",
-  starttime: "23:00",
+  start_time: "2022-09-09 23:00",
   address: "Hans-Böckler-Platz 2, 50672 Köln"
 )
 party2.user = user1
@@ -118,7 +118,7 @@ party3 = Party.new(
   _
   ",
   date: "2022-09-11",
-  starttime: "11:45",
+  start_time: "2022-09-11 11:45",
   address: "Rheinstraße, 50996 Köln, Germany"
 )
 party3.user = user2
@@ -133,7 +133,7 @@ party4 = Party.new(
 
   JAKI's entrance is not barrier-free.",
   date: "2022-09-09",
-  starttime: "23:30",
+  start_time: "2022-09-09 23:30",
   address: "Venloer Str. 40, 50672 Köln"
 )
 party4.user = user1
@@ -148,7 +148,7 @@ party5 = Party.new(
 
   Jeden Samstag, von 23:30 Uhr bis spät in die Nacht - alle Musikliebhaber:innen, Tänzer:innen, Zuhörer:innen, Freaks und Nicht-Freaks sind willkommen!",
   date: "2022-09-10",
-  starttime: "23:30",
+  start_time: "2022-09-10 23:30",
   address: "Venloer Str. 40, 50672 Köln"
 )
 
