@@ -1,13 +1,16 @@
+  <%= render "shared/navbar" %>
 <div class="card-party">
   <% @parties.each do |party| %>
     <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
     <div class="card-party-infos">
       <h3><%= party.title %></h3>
       <%# <p><strong>Genre: </strong><%= party.music_genre %>
-      <p><strong>Location: </strong><%= party.location %></p>
-      <%# <p><strong>Description: </strong><%= party.description %>
-      <p><strong>Date: </strong><%= party.date %></p>
-      <%# <p><strong>Start: </strong><%= party.starttime.strftime('%b %e, %l:%M %p') %>
+      <div class="card-details">
+        <p><strong>Location: </strong><%= party.location %></p>
+        <%# <p><strong>Description: </strong><%= party.description %>
+        <p><strong>Date: </strong><%= party.date %></p>
+        <%# <p><strong>Start: </strong><%= party.starttime.strftime('%b %e, %l:%M %p') %>
+      </div>
     </div>
   <% end %>
 </div>
