@@ -5,5 +5,8 @@ Rails.application.routes.draw do
   resources :parties
   # Defines the root path route ("/")
   # root "articles#index"
+  resources :parties do
+    get :favorite, on: :member
+  end
   get "/search", to: "parties#search"
 end
