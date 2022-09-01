@@ -1,9 +1,12 @@
 .card-party {
   overflow: hidden;
-  background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 50px 20px;
+  background-color: white;
+}
 
+.card {
+  margin: 10px auto;
 }
 
 .card-party > img {
@@ -28,10 +31,3 @@
 .card-party .card-party-infos {
   padding: 16px;
 }
-
-// .card-party-infos {
-//   position: absolute;
-//   right: 16px;
-//   top: -20px;
-//   width: 40px;
-// }
