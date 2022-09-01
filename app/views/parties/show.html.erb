@@ -1,0 +1,21 @@
+<h1><%= @party.title %></h1>
+<br>
+<%= cl_image_tag @party.photo.key, width: 800, crop: :fit, class: "rounded" %>
+<p><strong>Genre: </strong><%= @party.music_genre %></p>
+<p><%= @party.date.strftime("%a %e %B %Y") %></p>
+<p><%= @party.starttime.strftime("%l:%M %p") %></p>
+<p><%= @party.location %></p>
+<p><%= @party.description %></p>
+<% if current_user.favorited?(@party) %>
+  <%= link_to favorite_party_path, class: "btn btn-ghost" do %>
+    <i class="fa-regular fa-bookmark"></i>
+  <% end %>
+<% else %>
+  <%= link_to favorite_party_path, class: "btn btn-ghost" do%>
+    <i class="fa-solid fa-bookmark"></i>
+  <% end %>
+<% end %>
+<div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
