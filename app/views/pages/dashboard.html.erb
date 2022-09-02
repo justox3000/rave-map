@@ -15,25 +15,7 @@
     <% end %>
   </div>
 </div>
-<div class="index-container min-height">
-  <% @favorites.each do |party| %>
-    <%= link_to party_path(party) do %>
-      <div class="card-party">
-        <%= cl_image_tag party.photo.key, height: 200 %>
-        <div class="card-party-infos">
-          <h3 class="decoration-none"><%= party.title %></h3>
-          <%# <p><strong>Genre: </strong><%= party.music_genre %>
-          <div class="card-details">
-            <p><strong>Location: </strong><%= party.location %></p>
-            <%# <p><strong>Description: </strong><%= party.description %>
-            <p><strong>Date: </strong><%= party.date %></p>
-            <%# <p><strong>Start: </strong><%= party.starttime.strftime('%b %e, %l:%M %p') %>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  <% end %>
-</div>
+
 <h2>Bookmarked: </h2>
 <div class="index-container min-height">
   <% @favorites.each do |party| %>
@@ -49,5 +31,5 @@
           </div>
         </div>
       <% end %>
-    <% end %>
+  <% end %>
 </div>
