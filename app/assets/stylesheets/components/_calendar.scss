@@ -1,4 +1,5 @@
 .simple-calendar {
+  background-color: white;
   table {
     min-height: 80vh;
   }
@@ -17,5 +18,15 @@
 
 .party:hover {
   background: #1BCB7F;
-  color: white;
+  color: black;
+}
+.dashboard-container {
+  h1 {
+    color: white;
+    text-align: center;
+    align-items: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-size: 35px;
+  }
 }
