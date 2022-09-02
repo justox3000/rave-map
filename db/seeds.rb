@@ -118,7 +118,7 @@ party3 = Party.new(
   _
   ",
   date: "2022-09-11",
-  start_time: "2022-10-11 11:45",
+  start_time: "2022-09-11 11:45",
   address: "Rheinstraße, 50996 Cologne, Germany"
 )
 party3.user = user2
