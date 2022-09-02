@@ -134,7 +134,7 @@ party4 = Party.new(
   JAKI's entrance is not barrier-free.",
   date: "2022-09-09",
   start_time: "2022-09-09 23:30",
-  address: "Venloer Str. 40, 50672 Köln"
+  address: "Venloer Str. 40, 50672 Cologne"
 )
 party4.user = user1
 party4.photo.attach(io: url4, filename: "p4.png", content_type: "image/png")

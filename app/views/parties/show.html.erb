@@ -7,20 +7,31 @@
     <div class="card-show-details d-flex justify-content-between">
       <div class="card-show-infos">
         <p><strong>Genre: </strong><%= @party.music_genre %></p>
-        <p>Date<%= @party.date.strftime("%a %e %B %Y") %></p>
-        <p>Start Time<%= @party.start_time.strftime("%l:%M %p") %></p>
-        <p>Address: <%= @party.location %></p>
+        <p>Date: <%= @party.date.strftime("%a %e %B %Y") %></p>
+        <p>Start Time: <%= @party.start_time.strftime("%l:%M %p") %></p>
+        <p>Venue: <%= @party.location %></p>
+        <p>Address: <%= @party.address  %></p>
         <br>
         <p>Description</p>
       </div>
       <div class="btn-bookmark">
         <% if current_user.favorited?(@party) %>
-          <%= link_to favorite_party_path, class: "btn btn-light rounded-circle my-3" do %>
-            <i class="fa-solid fa-bookmark"></i>
+          <%= link_to favorite_party_path, data: {
+            controller: "bookmarked",
+            action: "click->bookmarked#fireSweetAlert",
+            turbo_method: :patch,
+            bookmarked_favoriting_value: false
+          }, class: "btn btn-light rounded-circle my-3" do %>
+            <i class="fa-solid fa-bookmark" data-bookmarked-target= "bookmark"></i>
           <% end %>
         <% else %>
-          <%= link_to favorite_party_path, class: "btn btn-light rounded-circle my-3" do%>
-            <i class="fa-regular fa-bookmark"></i>
+          <%= link_to favorite_party_path, class: "btn btn-light rounded-circle my-3", data: {
+            controller: "bookmarked",
+            action: "click->bookmarked#fireSweetAlert",
+            turbo_method: :patch,
+            bookmarked_favoriting_value: true
+          } do %>
+            <i class="fa-regular fa-bookmark" data-bookmarked-target= "bookmark"></i>
           <% end %>
         <% end %>
       </div>
