@@ -1,7 +1,7 @@
 .home-container {
   height: 100vh;
   position: relative;
-  background-image: url("/assets/images/mainimg.jpeg");
+  background-image: url("mainimg.jpeg");
   // background-image: url(<%= asset_path 'mainimg.jpeg' %>);
   background-size: cover;
 }
