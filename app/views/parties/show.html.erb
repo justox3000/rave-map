@@ -15,12 +15,12 @@
       </div>
       <div class="btn-bookmark">
         <% if current_user.favorited?(@party) %>
-          <%= link_to favorite_party_path, class: "btn btn-light rounded-circle my-3" do %>
-            <i class="fa-regular fa-bookmark"></i>
+          <%= link_to favorite_party_path, class: "btn btn-primary rounded-circle my-3" do%>
+            <i class="fa-solid fa-bookmark"></i>
           <% end %>
         <% else %>
-          <%= link_to favorite_party_path, class: "btn btn-light rounded-circle my-3" do%>
-            <i class="fa-solid fa-bookmark"></i>
+          <%= link_to favorite_party_path, class: "btn btn-primary rounded-circle my-3" do %>
+            <i class="fa-regular fa-bookmark"></i>
           <% end %>
         <% end %>
       </div>

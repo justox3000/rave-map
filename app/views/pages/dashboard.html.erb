@@ -1,16 +1,18 @@
-<h1>Dashboard</h1>
-<br>
-<div class="Calendar">
-  <%= month_calendar(events: @parties) do |date, parties| %>
-    <%= date %>
-    <% parties.each do |party| %>
+<%= render "shared/navbar" %>
+<%= render "shared/search_form" %>
+<div class="dashboard-container">
+  <h1>Your Events</h1>
+  <div class="Calendar">
+    <%= month_calendar(events: @parties) do |date, parties| %>
+      <%= date %>
+      <% parties.each do |party| %>
       <%= link_to party_path(party) do %>
         <div class="party">
           <p><%= party.title %></p>
         </div>
       <% end %>
     <% end %>
-  <% end %>
+  </div>
 </div>
 <h2>Bookmarked: </h2>
 <div class="index-container min-height">

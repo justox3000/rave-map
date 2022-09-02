@@ -5,6 +5,18 @@
   flex-flow: column;
   width: 100%;
   position: absolute;
-  top: 300px;
+  top: 280px;
   margin: 0 auto;
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .search-form-input-date {
+    width: 33%;
+    margin-right: 5px;
+  }
+  p {
+    font-size: 20px;
+  }
 }
