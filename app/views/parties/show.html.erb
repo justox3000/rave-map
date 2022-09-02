@@ -21,11 +21,11 @@
             action: "click->bookmarked#fireSweetAlert",
             turbo_method: :patch,
             bookmarked_favoriting_value: false
-          }, class: "btn btn-light rounded-circle my-3" do %>
+          }, class: "btn btn-primary rounded-circle my-3" do %>
             <i class="fa-solid fa-bookmark" data-bookmarked-target= "bookmark"></i>
           <% end %>
         <% else %>
-          <%= link_to favorite_party_path, class: "btn btn-light rounded-circle my-3", data: {
+          <%= link_to favorite_party_path, class: "btn btn-primary rounded-circle my-3", data: {
             controller: "bookmarked",
             action: "click->bookmarked#fireSweetAlert",
             turbo_method: :patch,
