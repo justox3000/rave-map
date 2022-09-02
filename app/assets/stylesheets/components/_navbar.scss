@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: none;
+  background: white;
+  height: 55px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -18,10 +19,12 @@
 .nav-item {
   margin-left: 70%;
   background-color: white;
-  padding-left: 16px;
-  text-decoration: none;
+  padding-left: 11px;
 }
 
 .nav-link {
   font-weight: bold;
+}
+.logout {
+  text-decoration: none;
 }
