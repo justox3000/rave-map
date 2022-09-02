@@ -6,8 +6,8 @@
   <%= cl_image_tag @party.photo.key, width: 800, crop: :fit, class: "rounded" %>
   <div class="card-show-infos">
     <p><strong>Genre: </strong><%= @party.music_genre %></p>
-    <p>Date<%= @party.date.strftime("%a %e %B %Y") %></p>
-    <p>Start Time<%= @party.starttime.strftime("%l:%M %p") %></p>
+    <p>Date: <%= @party.date.strftime("%a %e %B %Y") %></p>
+    <p>Start Time: <%= @party.start_time.strftime("%l:%M %p") %></p>
     <p>Address: <%= @party.location %></p>
     <br>
     <p>Description</p>
@@ -28,4 +28,3 @@
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>
-
