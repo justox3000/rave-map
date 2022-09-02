@@ -24,6 +24,5 @@ class PartiesController < ApplicationController
     else
       current_user.favorite(@party)
     end
-    redirect_to party_path(@party)
   end
 end
