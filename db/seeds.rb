@@ -63,7 +63,7 @@ party1 = Party.new(
   Solltet ihr sexistisches, nationalistisches oder diskriminierendes Gedankengut in jedweder Form in euch tragen, so bitten wir euch, von unserem Rave fernzubleiben. Der Schutz von diskriminierungsfreien Räumen - dazu gehört auch unsere Veranstaltung - hat für uns oberste Priorität. ",
   date: "2022-09-09",
   start_time: "2022-09-09 23:00",
-  address: "Heliosstraße 37, 50825 Köln"
+  address: "Heliosstraße 37, 50825 Cologne"
 )
 party1.user = user1
 party1.photo.attach(io: url1, filename: "p1.png", content_type: "image/png")
@@ -81,7 +81,7 @@ party2 = Party.new(
   Bei verlorengegangenen Gegenständen bitte eine Mail an lostandfound@gewoelbe.net schreiben",
   date: "2022-09-09",
   start_time: "2022-09-09 23:00",
-  address: "Hans-Böckler-Platz 2, 50672 Köln"
+  address: "Hans-Böckler-Platz 2, 50672 Cologne"
 )
 party2.user = user1
 party2.photo.attach(io: url2, filename: "p1.png", content_type: "image/png")
@@ -119,7 +119,7 @@ party3 = Party.new(
   ",
   date: "2022-09-11",
   start_time: "2022-09-11 11:45",
-  address: "Rheinstraße, 50996 Köln, Germany"
+  address: "Rheinstraße, 50996 Cologne, Germany"
 )
 party3.user = user2
 party3.photo.attach(io: url3, filename: "p3.png", content_type: "image/png")
@@ -149,7 +149,7 @@ party5 = Party.new(
   Jeden Samstag, von 23:30 Uhr bis spät in die Nacht - alle Musikliebhaber:innen, Tänzer:innen, Zuhörer:innen, Freaks und Nicht-Freaks sind willkommen!",
   date: "2022-09-10",
   start_time: "2022-09-10 23:30",
-  address: "Venloer Str. 40, 50672 Köln"
+  address: "Venloer Str. 40, 50672 Cologne"
 )
 
 # picture: https://imgproxy.ra.co/_/quality:100/w:1500/rt:fill/plain/https://images.ra.co/6ba49198550a1883282b88cd5a1067a3e7fc2f09.jpg
