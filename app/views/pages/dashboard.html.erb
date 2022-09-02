@@ -6,10 +6,10 @@
     <%= month_calendar(events: @parties) do |date, parties| %>
       <%= date %>
       <% parties.each do |party| %>
-      <%= link_to party_path(party) do %>
-        <div class="party">
-          <p><%= party.title %></p>
-        </div>
+        <%= link_to party_path(party) do %>
+          <div class="party">
+            <p><%= party.title %></p>
+          </div>
         <% end %>
       <% end %>
     <% end %>
