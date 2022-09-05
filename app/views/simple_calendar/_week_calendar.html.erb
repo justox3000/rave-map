@@ -12,27 +12,13 @@
   </div>
 
   <table class="table table-striped">
-    <%# <thead>
-      <tr>
-        <% date_range.slice(0, 7).each do |day| %>
-          <%# <th><%= t('date.abbr_day_names')[day.wday] </th>
-        <%# <% end %>
-      <%# </tr> %>
-    <%# </thead> %>
-
     <tbody>
       <% date_range.each_slice(7) do |week| %>
           <% week.each do |day| %>
           <tr>
-            <th><%= t('date.abbr_day_names')[day.wday] %></th>
-          </tr>
-          <tr>
             <%= content_tag :td, class: calendar.td_classes_for(day) do %>
-              <% if defined?(Haml) && respond_to?(:block_is_haml?) && block_is_haml?(passed_block) %>
-                <% capture_haml(day, sorted_events.fetch(day, []), &passed_block) %>
-              <% else %>
+              <strong> <%= t('date.abbr_day_names')[day.wday] %> </strong>
                 <% passed_block.call day, sorted_events.fetch(day, []) %>
-              <% end %>
             <% end %>
           <% end %>
           </tr>
