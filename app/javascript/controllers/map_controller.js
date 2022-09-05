@@ -12,19 +12,17 @@ export default class extends Controller {
 
     this.map = new mapboxgl.Map({
       container: this.element,
-      // style: "mapbox://styles/juslambre/cl7ng8x83006615l9wr90ztu0"
-      style : "mapbox://styles/mapbox/dark-v10"
-      //
-      // style: "mapbox://styles/mapbox/streets-v10"
+      // style: 'mapbox://styles/mapbox/dark-v10',
+      style: 'https://api.mapbox.com/styles/juslambre/cl7ng8x83006615l9wr90ztu0',
+      // style: "https://api.mapbox.com/styles/v1/juslambre/cl7ng8x83006615l9wr90ztu0.html?title=view&access_token=pk.eyJ1IjoianVzbGFtYnJlIiwiYSI6ImNqeTB1ZGo4eTAxdXUzbmsyOG1xcmQ1NWMifQ.IWZKtDwcnUCq03fo9-ualg&zoomwheel=true&fresh=true#12.53/50.93806/6.97102",
     })
-
     this.#addMarkersToMap()
     this.#fitMapToMarkers()
   }
 
   #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
-      new mapboxgl.Marker()
+      new mapboxgl.Marker({color: 'green'})
         .setLngLat([ marker.lng, marker.lat ])
         .addTo(this.map)
     })

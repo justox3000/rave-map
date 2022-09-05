@@ -1,13 +1,12 @@
 .home-container {
   height: 100vh;
   position: relative;
-  background-image: url("mainimg.jpeg");
-  // TODO:
-  // background-image: url("abstract_anim2.gif");
+  // background-image: url("mainimg.jpeg");
+  background-image: url("Abstract_moving.gif");
   // background-image: url(<%= asset_path 'mainimg.jpeg' %>);
   background-size: cover;
 }
 
-p {
-  color: white;
-}
+// p {
+//   font-size: larger;
+// }
