@@ -34,7 +34,11 @@
             <i class="fa-regular fa-bookmark" data-bookmarked-target= "bookmark"></i>
           <% end %>
         <% end %>
-      </div>
+        <% if policy(@party).edit? %>
+          <%= link_to "Edit this party", edit_party_path(@party) %> |
+        <% end %>
+          <%= button_to "Destroy this party", @party, method: :delete if policy(@party).destroy? %>
+        </div>
     </div>
     <p class="card-description"><%= @party.description %></p>
   <div style="width: 100%; height: 400px;"
