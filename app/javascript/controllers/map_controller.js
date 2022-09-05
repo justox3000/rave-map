@@ -10,11 +10,18 @@ export default class extends Controller {
   connect() {
     mapboxgl.accessToken = this.apiKeyValue
 
+    /* const customMarker = document.createElement("div")
+                            customMarker.className = "marker"
+                            customMarker.style.backgroundImage = `url('${marker.image_url}')`
+                            customMarker.style.backgroundSize = "contain"
+                            customMarker.style.width = "25px"
+                            customMarker.style.height = "25px"
+      new mapboxgl.Marker(customMarker) */
+
     this.map = new mapboxgl.Map({
       container: this.element,
-      // style: 'mapbox://styles/mapbox/dark-v10',
-      style: 'https://api.mapbox.com/styles/juslambre/cl7ng8x83006615l9wr90ztu0',
-      // style: "https://api.mapbox.com/styles/v1/juslambre/cl7ng8x83006615l9wr90ztu0.html?title=view&access_token=pk.eyJ1IjoianVzbGFtYnJlIiwiYSI6ImNqeTB1ZGo4eTAxdXUzbmsyOG1xcmQ1NWMifQ.IWZKtDwcnUCq03fo9-ualg&zoomwheel=true&fresh=true#12.53/50.93806/6.97102",
+      style: 'mapbox://styles/mapbox/dark-v10',
+      // style: "mapbox://styles/juslambre/cl7ng8x83006615l9wr90ztu0",
     })
     this.#addMarkersToMap()
     this.#fitMapToMarkers()

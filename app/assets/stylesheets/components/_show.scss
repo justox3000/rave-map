@@ -21,7 +21,7 @@
   }
 
   .card-description {
-    font-size: 12px;
+    font-size: 15px;
     opacity: .7;
     margin: 2 0 10px 0;
 
@@ -36,3 +36,25 @@
     margin: 3px;
     }
   }
+
+  .card-collapse {
+    background-color: black;
+  }
+
+  .button {
+    font-size: 15px;
+    padding: 7px 20px;
+    background: #c0c0c0;
+    color: black;
+    border: 2px outset;
+    outline: none;
+    cursor: pointer;
+
+    &:active {
+      border: 2px inset;
+    }
+  }
+
+.card-collapse {
+  text-align: left;
+}
