@@ -39,3 +39,17 @@
   background: linear-gradient(#147EFF, #0F67DA);
   color: white;
 }
+
+.retro-button {
+  font-size: 15px;
+  padding: 7px 20px;
+  background: #c0c0c0;
+  color: black;
+  border: 2px outset;
+  outline: none;
+  cursor: pointer;
+
+  &:active {
+    border: 2px inset;
+  }
+}

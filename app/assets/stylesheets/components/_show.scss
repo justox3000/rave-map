@@ -22,9 +22,22 @@
 
   .card-description {
     font-size: 15px;
-    opacity: .7;
+    // opacity: .7;
     margin: 2 0 10px 0;
 
+    .retro-button {
+    font-size: 15px;
+    padding: 7px 20px;
+    background: #c0c0c0;
+    color: black;
+    border: 2px outset;
+    outline: none;
+    cursor: pointer;
+
+    &:active {
+      border: 2px inset;
+    }
+    }
   }
 }
 
@@ -39,22 +52,19 @@
 
   .card-collapse {
     background-color: black;
+    padding-left: 0px;
   }
 
-  .button {
-    font-size: 15px;
-    padding: 7px 20px;
-    background: #c0c0c0;
-    color: black;
-    border: 2px outset;
-    outline: none;
-    cursor: pointer;
+  .edit {
+    justify-content: space-between;
+    display: flex;
+    .edit2 {
+      display: flex;
+      color: grey;
+      text-decoration: underline;
+    }
 
-    &:active {
-      border: 2px inset;
+    .destroy {
+      margin-left: 2px;
     }
   }
-
-.card-collapse {
-  text-align: left;
-}

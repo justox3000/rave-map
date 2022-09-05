@@ -16,7 +16,8 @@ export default class extends Controller {
         title: 'Success!',
         text: 'You added this party to your calendar!',
         icon: 'success',
-        confirmButtonText: 'Cool'
+        confirmButtonText: 'Cool',
+        confirmButtonColor: '#07E764'
       })
       this.element.reload()
     } else {
