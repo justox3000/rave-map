@@ -4,17 +4,14 @@
 <div class="card-show-container">
   <h1><%= @party.title %></h1>
   <%= cl_image_tag @party.photo.key, width: 800, crop: :fit, class: "rounded" %>
-    <div class="card-show-details d-flex justify-content-between">
-      <div class="card-show-infos">
-        <p><i class="fa-solid fa-music"></i> <%= @party.music_genre %></p>
-        <p><i class="fa-solid fa-calendar-days"> </i> <%= @party.date.strftime("%a %e %B %Y") %></p>
-        <p><i class="fa-solid fa-clock-eleven"></i> <%= @party.start_time.strftime("%l:%M %p") %></p>
-        <p><i class="fa-solid fa-location-dot"> </i> <%= @party.location %></p>
-        <p><i class="fa-solid fa-earth-americas"> </i> <%= @party.address  %></p>
-        <br>
-        <p>Description</p>
+    <div class="edit">
+      <div class="edit2">
+      <% if policy(@party).edit? %>
+        <%= link_to "Edit this party", edit_party_path(@party) %> |
+      <% end %>
+        <%= link_to "Delete this party", @party, class: "destroy", method: :delete if policy(@party).destroy? %>
       </div>
-      <div class="btn-bookmark">
+        <div class="btn-bookmark">
         <% if current_user.favorited?(@party) %>
           <%= link_to favorite_party_path, data: {
             controller: "bookmarked",
@@ -34,23 +31,32 @@
             <i class="fa-regular fa-bookmark" data-bookmarked-target= "bookmark"></i>
           <% end %>
         <% end %>
-        <% if policy(@party).edit? %>
-          <%= link_to "Edit this party", edit_party_path(@party) %> |
-        <% end %>
-          <%= button_to "Destroy this party", @party, method: :delete if policy(@party).destroy? %>
         </div>
     </div>
-    <p class="card-description"><%= @party.description[0..249] %></p>
-    <% if @party.description.length >= 250 %>
-      <a class="button" data-bs-toggle="collapse" href="#collapseExample" role="button">
-        Read more
-      </a>
-      <div class="collapse" id="collapseExample">
-        <div class="card card-body card-collapse">
-          <p class="card-description"><%= @party.description[250..] %></p>
-    <% end %>
+    <div class="card-show-details d-flex justify-content-between">
+      <div class="card-show-infos">
+        <p><i class="fa-solid fa-music"></i> <%= @party.music_genre %></p>
+        <p><i class="fa-solid fa-calendar-days"> </i> <%= @party.date.strftime("%a %e %B %Y") %></p>
+        <p><i class="fa-solid fa-clock-eleven"></i> <%= @party.start_time.strftime("%l:%M %p") %></p>
+        <p><i class="fa-solid fa-location-dot"> </i> <%= @party.location %></p>
+        <p><i class="fa-solid fa-earth-americas"> </i> <%= @party.address  %></p>
+        <br>
+        <p>Description</p>
+      </div>
+    </div>
+    <div class="card-description">
+      <p><%= @party.description[0..249] %></p>
+      <% if @party.description.length >= 250 %>
+        <a class="retro-button" data-bs-toggle="collapse" href="#collapseExample" role="button" data->
+          Read more
+        </a>
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body card-collapse">
+            <p class="card-description"><%= @party.description[250..] %></p>
+      <% end %>
+          </div>
         </div>
-  </div>
+    </div>
 
   <div style="width: 100%; height: 400px;"
     data-controller="map"

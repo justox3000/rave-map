@@ -66,6 +66,7 @@ class PartiesController < ApplicationController
     else
       current_user.favorite(@party)
     end
+    authorize @party
   end
 
   private
