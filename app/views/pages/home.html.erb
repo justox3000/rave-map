@@ -2,6 +2,7 @@
   <div class="back-img">
     <%= render "shared/navbar" %>
     <div class="banner">
+
       <p class="h1">RAVE MAP</p>
       <p>Never miss a good rave!</p>
         <% #= simple_form_for :search, method: "get" do |f| %>
@@ -10,7 +11,7 @@
           <% #= f.button :submit, "Go", class: "btn btn-dark d-flex align-items-end flex-column" %>
 
         <% # end %>
-        <%= render "shared/search_form" %>
+        <%= render "shared/search_form_home" %>
     </div>
   </div>
 </div>
