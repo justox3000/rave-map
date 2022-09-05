@@ -9,4 +9,5 @@ Rails.application.routes.draw do
     patch :favorite, on: :member
   end
   get "/search", to: "parties#search"
+  get "/create", to: "parties#create"
 end
