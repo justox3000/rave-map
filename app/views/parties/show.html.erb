@@ -45,16 +45,25 @@
       </div>
     </div>
     <div class="card-description">
-      <p><%= @party.description[0..249] %></p>
-      <% if @party.description.length >= 250 %>
-        <a class="retro-button" data-bs-toggle="collapse" href="#collapseExample" role="button" data->
-          Read more
-        </a>
-        <div class="collapse" id="collapseExample">
-          <div class="card card-body card-collapse">
-            <p class="card-description"><%= @party.description[250..] %></p>
-      <% end %>
+      <% if @party.description.length < 250 %>
+        <p><%= @party.description %></p>
+      <% else %>
+        <div data-controller="readmore">
+          <div data-readmore-target="hideable">
+            <p><%= @party.description[0..249] %></p>
+            <a class="retro-button" role="button" data-action="readmore#hidden">
+              Read more
+            </a>
           </div>
+          <div data-readmore-target="hideable" hidden>
+            <p><%= @party.description %></p>
+          </div>
+          <%# <div class="collapse">
+            <div class="card card-body card-collapse">
+              <p class="card-description"><%= @party.description[250..] %>
+            <%# </div> %>
+      <% end %>
+            <%# </div> %>
         </div>
     </div>
 
