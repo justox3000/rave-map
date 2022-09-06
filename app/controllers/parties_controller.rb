@@ -21,6 +21,10 @@ class PartiesController < ApplicationController
       lng: @party.longitude,
     }]
     authorize @party
+    @user = current_user
+    @comment = Comment.new
+    @comment.user = @user
+    @comment.party = @party
   end
 
   def edit

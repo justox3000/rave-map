@@ -1,0 +1,6 @@
+<h1>Write a Comment</h1>
+<%= simple_form_for [@party, @comment] do |f| %>
+  <%= f.input :content %>
+  <%= f.input :rating %>
+  <%= f.submit "Comment" %>
+<% end %>
