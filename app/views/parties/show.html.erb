@@ -1,5 +1,8 @@
 
 <%= render "shared/navbar" %>
+<% @party.comments.each do |comment| %>
+  <%= comment.content %>
+<% end %>
 <%= render "shared/search_form" %>
 <div class="card-show-container">
   <h1><%= @party.title %></h1>
@@ -69,6 +72,13 @@
             <%# </div> %>
         </div>
     </div>
+
+    <h1>Write a Comment</h1>
+    <%= simple_form_for [@party, @comment] do |f| %>
+      <%= f.input :content %>
+      <%= f.input :rating %>
+      <%= f.submit "Comment" %>
+    <% end %>
 
   <div style="width: 100%; height: 400px;"
     data-controller="map"

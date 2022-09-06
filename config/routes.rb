@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :parties do
     patch :favorite, on: :member
+    resources :comments, only: [:new, :create]
   end
   get "/search", to: "parties#search"
   get "/create", to: "parties#create"

@@ -1,4 +1,5 @@
 class Party < ApplicationRecord
+  has_many :comments
   acts_as_favoritable
   has_one_attached :photo
   belongs_to :user
