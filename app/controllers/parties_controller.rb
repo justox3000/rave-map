@@ -19,9 +19,20 @@ class PartiesController < ApplicationController
     @markers = [{
       lat: @party.latitude,
       lng: @party.longitude,
+      info_window: render_to_string(partial: "info_window", locals: { party: @party })
     }]
     authorize @party
   end
+
+  # def add_to_cal
+  #   @party = Party.find(params[:id])
+  #   @dt = DateTime.parse("#{@party.date}T#{@party.start_time.strftime("%l:%M %p")}")
+  #   @cal = AddToCalendar::URLs.new(
+  #     start_datetime: @dt,
+  #     title: @party.title,
+  #     timezone: 'Europe/London'
+  #   )
+  # end
 
   def edit
     @user = current_user
