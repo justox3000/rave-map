@@ -31,13 +31,13 @@ class PartiesController < ApplicationController
 
   def create
     @party = Party.new(party_params)
-    @party.user_id = current_user
+    authorize @party
+    @party.user = current_user
     if @party.save
       redirect_to party_path(@party)
     else
-      render :create, status: :unprocessable_entity
+      render :new
     end
-    authorize @party
   end
 
   def update
@@ -59,19 +59,18 @@ class PartiesController < ApplicationController
 
   def favorite
     return redirect_to new_user_registration_path unless current_user
-    authorize @party
     @party = Party.find(params[:id])
+    authorize @party
     if current_user.favorited?(@party)
       current_user.unfavorite(@party)
     else
       current_user.favorite(@party)
     end
-
   end
 
   private
 
   def party_params
-    params.permit(:title, :music_genre, :location, :description, :date, :start_time, :photo)
+    params.require(:party).permit(:title, :music_genre, :location, :description, :date, :start_time, :photo)
   end
 end
