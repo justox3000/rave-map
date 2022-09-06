@@ -11,4 +11,15 @@ class PagesController < ApplicationController
     @favorites = @user.all_favorited
     @parties = parties.select { |p| @favorites.include?(p) }
   end
+
+  def map
+    @parties = Party.all
+    @markers = @parties.geocoded.map do |party|
+      {
+        lat: party.latitude,
+        lng: party.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { party: party })
+      }
+    end
+  end
 end

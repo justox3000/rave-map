@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+// import BigmapController from "./bigmap_controller"
+// application.register("bigmap", BigmapController)
+
 import BookmarkedController from "./bookmarked_controller"
 application.register("bookmarked", BookmarkedController)
 

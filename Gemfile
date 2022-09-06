@@ -9,6 +9,8 @@ gem "devise"
 
 gem "simple_calendar", "~> 2.4"
 
+gem 'add_to_calendar'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3", ">= 7.0.3.1"
 
