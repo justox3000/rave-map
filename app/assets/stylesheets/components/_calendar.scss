@@ -9,11 +9,12 @@
 }
 
 .party {
-  color: white;
+  color: black;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #1EDD88;
+  background: $neongreen;
   transition: background 0.3s ease;
+  text-decoration: underline;
 }
 
 .party:hover {

@@ -9,7 +9,9 @@
       <% end %>
       <%= link_to t('simple_calendar.next', default: 'Next'), calendar.url_for_next_view, class: 'retro-button' %>
     </div>
-    <%= link_to 'Create Party', new_party_path, class: 'retro-button'%>
+    <div class="my-1">
+      <%= link_to 'Create Party', new_party_path, class: 'retro-button'%>
+    </div>
   </div>
 
   <table class="table table-striped">
