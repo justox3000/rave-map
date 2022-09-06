@@ -2,9 +2,20 @@
   <div class="back-img">
     <%= render "shared/navbar" %>
     <div class="banner">
-
-      <p class="h1">RAVE MAP</p>
-      <p>Never miss a good rave!</p>
+    <div class="logo-body">
+      <h1>
+      <span>R</span>
+      <span>A</span>
+      <span>V</span>
+      <span>E</span>
+      <span>&nbsp;</span>
+      <span>M</span>
+      <span>A</span>
+      <span>P</span>
+      </h1>
+    </div>
+      <%# <p class="h1">RAVE MAP</p>
+      <p>Never miss a good rave!</p> %>
         <% #= simple_form_for :search, method: "get" do |f| %>
           <% #= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
           <% #= f.text_field :query, placeholder: "location", class: "form-control" %>
