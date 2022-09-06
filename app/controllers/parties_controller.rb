@@ -59,14 +59,14 @@ class PartiesController < ApplicationController
 
   def favorite
     return redirect_to new_user_registration_path unless current_user
-
+    authorize @party
     @party = Party.find(params[:id])
     if current_user.favorited?(@party)
       current_user.unfavorite(@party)
     else
       current_user.favorite(@party)
     end
-    authorize @party
+
   end
 
   private
