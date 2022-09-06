@@ -1,16 +1,16 @@
 <%= render "shared/navbar" %>
-<div class="create-container" id="party-form">
+<div class="create-container align-items-center" id="party-form">
   <div class="row justify-content-center">
     <div class="col-10 border">
       <div class="simple-form">
-        <h1>Create a new event</h1>
+        <h1 class="my-3">Create a new event</h1>
         <div class="create-input">
           <%= simple_form_for(@party) do |f| %>
             <div class="row g-3 align-items-center">
               <div class="col-auto">
                 <label for="title" class="col-form-label">Title *</label>
               </div>
-              <div class="col-auto">
+              <div class="col-auto flex-grow-1">
                 <%= f.input :title, id: "title", class: "form-control", label: false, placeholder: "Cologne Rave" %>
               </div>
             </div>
@@ -18,7 +18,7 @@
               <div class="col-auto">
                 <label for="music_genre" class="col-form-label">Music genre * </label>
               </div>
-              <div class="col-auto">
+              <div class="col-auto flex-grow-1">
                 <%= f.input :music_genre, id: "music_genre", class: "form-control", label: false, placeholder: "Techno" %>
               </div>
             </div>
@@ -26,7 +26,7 @@
               <div class="col-auto">
                 <label for="location" class="col-form-label">Location *</label>
               </div>
-              <div class="col-auto">
+              <div class="col-auto flex-grow-1">
                 <%= f.input :location, id: "location", class: "form-control", label: false, placeholder: "Cologne" %>
               </div>
             </div>
@@ -34,7 +34,7 @@
               <div class="col-auto">
                 <label for="address" class="col-form-label">Address *</label>
               </div>
-              <div class="col-auto">
+              <div class="col-auto flex-grow-1">
                 <%= f.input :address, id: "address", class: "form-control", label: false, placeholder: "Hohenzollernring 22-24 Le Wagon, 1. Etage, 50672 Köln" %>
               </div>
             </div>
@@ -42,15 +42,31 @@
               <div class="col-auto">
                 <label for="description" class="col-form-label">Description *</label>
               </div>
-              <div class="col-auto">
+              <div class="col-auto flex-grow-1">
                 <%= f.input :description, id: "description", class: "form-control", label: false, placeholder: "Awesome!" %>
               </div>
             </div>
-            <%= f.date_field :date,
-                     class: "search-form-create",
-                     value: params[:date] %>
-            <%= f.input :start_time, as: :time %>
-            <%= f.input :photo, as: :file %>
+            <div class="row g-3 align-items-center">
+              <div class="col-auto">
+                <label for="date" class="col-form-label">Date *</label>
+              </div>
+              <div class="col-auto flex-grow-1">
+                <%= f.date_field :date,  class: "form-control mb-3", label: false %>
+              </div>
+            </div>
+            <div class="row g-3 align-items-center">
+              <div class="col-auto">
+                <label for="start_time" class="col-form-label">Start *</label>
+              </div>
+              <div class="col-auto flex-grow-1">
+                <%= f.input :start_time, as: :time,  class: "form-control", label: false %>
+              </div>
+            </div>
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <%= f.input :photo, as: :file,  class: "form-control", label: false, placeholder: "Choose photo"%>
+                </div>
+              </div>
             <div class="submit-create mb-3">
               <%= f.submit %>
             </div>
