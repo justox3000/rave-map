@@ -1,0 +1,14 @@
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: "Electrolize", sans-serif;
+  color: black;
+  padding-bottom: 1px;
+
+  h4 {
+    font-size: medium;
+  }
+}

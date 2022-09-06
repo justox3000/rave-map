@@ -19,6 +19,7 @@ class PartiesController < ApplicationController
     @markers = [{
       lat: @party.latitude,
       lng: @party.longitude,
+      info_window: render_to_string(partial: "info_window", locals: { party: @party })
     }]
     authorize @party
   end
