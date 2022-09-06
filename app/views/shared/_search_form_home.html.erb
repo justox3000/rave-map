@@ -1,7 +1,7 @@
 <%= form_with url: parties_path, method: :get, html: { class: "mx-2 mt-2 d-flex justify-content-center" } do |f| %>
     <%= f.text_field :query,
                      class: "search-form-input",
-                     placeholder: "city,address,name...",
+                     placeholder: "location",
                      value: params[:query] %>
 
 

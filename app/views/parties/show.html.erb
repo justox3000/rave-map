@@ -1,8 +1,5 @@
 
 <%= render "shared/navbar" %>
-<% @party.comments.each do |comment| %>
-  <%= comment.content %>
-<% end %>
 <%= render "shared/search_form" %>
 <div class="card-show-container">
   <h1><%= @party.title %></h1>
@@ -15,25 +12,31 @@
         <%= link_to "Delete this party", @party, class: "destroy", method: :delete if policy(@party).destroy? %>
         </div>
         <div class="btn-bookmark">
-        <% if current_user.favorited?(@party) %>
-          <%= link_to favorite_party_path, data: {
-            controller: "bookmarked",
-            action: "click->bookmarked#fireSweetAlert",
-            turbo_method: :patch,
-            bookmarked_favoriting_value: false
-          }, class: "btn btn-primary rounded-circle my-3" do %>
-            <i class="fa-solid fa-bookmark" data-bookmarked-target= "bookmark"></i>
+        <% if user_signed_in? %>
+          <% if current_user.favorited?(@party) %>
+            <%= link_to favorite_party_path, data: {
+              controller: "bookmarked",
+              action: "click->bookmarked#fireSweetAlert",
+              turbo_method: :patch,
+              bookmarked_favoriting_value: false
+            }, class: "btn btn-primary rounded-circle my-3" do %>
+              <i class="fa-solid fa-bookmark" data-bookmarked-target= "bookmark"></i>
+            <% end %>
+          <% else %>
+            <%= link_to favorite_party_path, class: "btn btn-primary rounded-circle my-3", data: {
+              controller: "bookmarked",
+              action: "click->bookmarked#fireSweetAlert",
+              turbo_method: :patch,
+              bookmarked_favoriting_value: true
+            } do %>
+              <i class="fa-regular fa-bookmark" data-bookmarked-target= "bookmark"></i>
+            <% end %>
           <% end %>
         <% else %>
-          <%= link_to favorite_party_path, class: "btn btn-primary rounded-circle my-3", data: {
-            controller: "bookmarked",
-            action: "click->bookmarked#fireSweetAlert",
-            turbo_method: :patch,
-            bookmarked_favoriting_value: true
-          } do %>
-            <i class="fa-regular fa-bookmark" data-bookmarked-target= "bookmark"></i>
-          <% end %>
-        <% end %>
+          <%= link_to new_user_session_path, class: "btn btn-primary rounded-circle my-3" do %>
+              <i class="fa-regular fa-bookmark"></i>
+              <% end %>
+            <% end %>
         </div>
     </div>
     <div class="card-show-details d-flex justify-content-between">
@@ -64,20 +67,21 @@
           <div data-readmore-target="hideable" hidden>
             <p><%= @party.description %></p>
           </div>
-          <%# <div class="collapse">
-            <div class="card card-body card-collapse">
-              <p class="card-description"><%= @party.description[250..] %>
-            <%# </div> %>
       <% end %>
-            <%# </div> %>
         </div>
     </div>
-
-    <h1>Write a Comment</h1>
-    <%= simple_form_for [@party, @comment] do |f| %>
-      <%= f.input :content %>
-      <%= f.input :rating %>
-      <%= f.submit "Comment" %>
+    <% if user_signed_in? %>
+      <div class="pt-5 pb-3" id="comment-form">
+        <div class="border border-primary">
+          <div class="m-2">
+            <h1>Write a Comment</h1>
+            <%= simple_form_for [@party, @comment] do |f| %>
+              <%= f.input :content %>
+              <%= f.submit "Comment", class: "retro-button" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
     <% end %>
 
   <div style="width: 100%; height: 400px;"
