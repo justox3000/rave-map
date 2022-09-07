@@ -57,9 +57,11 @@
         <div data-controller="readmore">
           <div data-readmore-target="hideable">
             <p><%= @party.description[0..249] %></p>
-            <a class="retro-button" role="button" data-action="readmore#hidden">
+            <div class="d-flex justify-content-end">
+              <a class="retro-button px-2" role="button" data-action="readmore#hidden">
               read more
-            </a>
+              </a>
+            </div>
           </div>
           <div data-readmore-target="hideable" hidden>
             <p><%= @party.description %></p>
@@ -95,8 +97,8 @@
         </button>
       </div>
       <% end %>
-      <div class="comment-button">
-        <%= link_to "comment", new_party_comment_path(@party), role: "button", class: "retro-button" %>
+      <div class="comment-button d-flex justify-content-end">
+        <%= link_to "comment", party_comments_path(@party), role: "button", class: "retro-button px-2" %>
       </div>
     <% end %>
 

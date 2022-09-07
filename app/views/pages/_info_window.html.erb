@@ -1,3 +1,7 @@
-<h4><%= party.location %></h4>
-<p><%= party.address %> </p>
-<p><%= link_to party.title, party_path(party) %></p>
+<div class="map-popup">
+  <div class="text-center">
+    <h4 class="map-name"><i class="fa-solid fa-users me-2"></i><%= party.location %></h4>
+  </div>
+  <p class="map-address"><%= party.address %> </p>
+  <p class="mb-0"><%= link_to party.title, party_path(party) %></p>
+</div>
