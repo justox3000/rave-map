@@ -45,10 +45,7 @@
         <p><i class="fa-solid fa-calendar-days"> </i> <%= @party.date.strftime("%a %e %B %Y") %></p>
         <p><i class="fas fa-clock"></i> <%= @party.start_time.strftime("%l:%M %p") %></p>
         <p><i class="fa-solid fa-location-dot"> </i> <%= @party.location %></p>
-        <p><i class="fa-solid fa-earth-americas"> </i> <%= @party.address  %></p>
-        <%# <br> %>
-        <%# TODO: %>
-        <%# <%= @cal.google_url %>
+        <p><a href="#mapview"><i class="fa-solid fa-earth-americas" id="showmap"> </i> </a><%= @party.address  %></p>
         <br>
         <p>Description</p>
       </div>
@@ -76,7 +73,7 @@
           <div class="m-2">
             <h1>Write a Comment</h1>
             <%= simple_form_for [@party, @comment] do |f| %>
-              <%= f.input :content %>
+              <%= f.input :content, label: false %>
               <%= f.submit "Comment", class: "retro-button" %>
             <% end %>
           </div>
@@ -84,7 +81,8 @@
       </div>
     <% end %>
 
-  <div style="width: 100%; height: 400px;"
+  <div id="mapview"
+    style="width: 100%; height: 400px;"
     data-controller="map"
     data-map-markers-value="<%= @markers.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">

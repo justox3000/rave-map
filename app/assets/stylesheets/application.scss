@@ -22,3 +22,10 @@
 :root {
   --bs-link-color: #F4F4F4;
 }
+
+// TODO:
+// TURBOLINK COLOR
+html.turbolinks-progress-bar::before {
+  background-color: green !important;
+  height: 5px !important;
+}
