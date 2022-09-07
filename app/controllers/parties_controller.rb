@@ -22,12 +22,7 @@ class PartiesController < ApplicationController
       info_window: render_to_string(partial: "info_window", locals: { party: @party })
     }]
     authorize @party
-    if user_signed_in?
-      @user = current_user
-      @comment = Comment.new
-      @comment.user = @user
-      @comment.party = @party
-    end
+    @comments = @party.comments.last(3)
   end
 
   # def add_to_cal
