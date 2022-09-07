@@ -18,9 +18,7 @@ export default class extends Controller {
         icon: 'success',
         confirmButtonText: 'Cool',
         confirmButtonColor: '#07E764',
-        customClass: {
-          popup: 'border-radius-0'
-        }
+        customClass: { popup: "swal2-border-radius" }
       })
       this.element.reload()
     } else {
