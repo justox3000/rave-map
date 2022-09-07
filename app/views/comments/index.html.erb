@@ -10,9 +10,8 @@
     <% end %>
     <% @comments.each do |comment|%>
     <div class="user-comment mt-4 p-2 border border-white">
-      <%# <i class="fad fa-user-alien"></i> %>
       <div class="comment-user-time border-bottom">
-         <p class="comment-content"><i class="fal fa-user-alien"></i><%= comment.user.username %></p>
+      <p class="comment-content"><i class="fa-solid fa-skull me-2"></i><%= comment.user.username %></p>
           <p class="comment-content font-weight-light"><%= comment.created_at.strftime("%m-%e-%y %H:%M") %></p>
       </div>
         <div class="comment-text">
