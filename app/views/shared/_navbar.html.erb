@@ -4,9 +4,17 @@
       <%= image_tag "logo_rave_map.jpg" %>
         <%# <img src="/assets/images/logo_rave_map.jpg"/> %>
       </a>
+      <div class="map-burger">
+        <%= link_to map_path do%>
+        <div class="btn btn-primary d-flex align-items-center">
+        <p class="m-0 me-1">Map</p>
+         <i class="far fa-map"></i>
+        </div>
+        <% end %>
       <button class="navbar-toggler border border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      </div>
 
     <div class="collapse navbar-collapse ms-2 mt-3" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">

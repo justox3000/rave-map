@@ -18,6 +18,10 @@
     font-weight: bold;
     margin-bottom: 8px;
     text-align: center;
+    color: white;
+    text-shadow:
+    5px 3px 3px #07e764, 2px 5px 0px #07e764, 5px 3px 21px #07e764;
+  }
   }
 
   .card-description {
@@ -39,7 +43,6 @@
     }
     }
   }
-}
 
   .card-show-infos {
     margin-top: 10px;
