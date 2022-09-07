@@ -1,6 +1,10 @@
 class CommentsController < ApplicationController
 
-before_action :set_party, only:[:new, :create]
+before_action :set_party, only:[:new, :create, :index]
+
+  def index
+    @comments = @party.comments
+  end
 
   def new
     @comment = Comment.new
