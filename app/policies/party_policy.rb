@@ -19,7 +19,7 @@ class PartyPolicy < ApplicationPolicy
   end
 
   def show?
-   true
+    true
   end
 
   def favorite?
