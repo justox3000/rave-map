@@ -58,7 +58,7 @@
           <div data-readmore-target="hideable">
             <p><%= @party.description[0..249] %></p>
             <a class="retro-button" role="button" data-action="readmore#hidden">
-              Read more
+              read more
             </a>
           </div>
           <div data-readmore-target="hideable" hidden>
@@ -69,20 +69,22 @@
     </div>
 
     <% if user_signed_in? %>
-      <div id="carouselExampleControls" class="carousel slide my-4" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="comment-box text-center">
-              <p><%= @comments.first.content %></p>
+      <% if !@comments.empty? %>
+        <div id="carouselExampleControls" class="carousel slide my-4" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="comment-box text-center">
+                <p><%= @comments.first.content %></p>
+              </div>
             </div>
-          </div>
-            <% @comments[1..-1].each do |comment| %>
-          <div class="carousel-item">
-            <div class="comment-box text-center">
-              <p><%= comment.content %></p>
+              <% @comments[1..-1].each do |comment| %>
+            <div class="carousel-item">
+              <div class="comment-box text-center">
+                <p><%= comment.content %></p>
+              </div>
             </div>
-          </div>
-          <% end %>
+            <% end %>
+          <%# TODO: Link to comments index %>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -92,6 +94,10 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
+      </div>
+      <% end %>
+      <div class="comment-button">
+        <%= link_to "comment", new_party_comment_path(@party), role: "button", class: "retro-button" %>
       </div>
     <% end %>
 
