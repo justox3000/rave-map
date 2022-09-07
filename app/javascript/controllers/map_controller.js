@@ -27,7 +27,6 @@ export default class extends Controller {
     this.#fitMapToMarkers()
   }
 
-  // TODO: CHANGE COLOR OF MARKERS
   #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.info_window)
