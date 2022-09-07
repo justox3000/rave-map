@@ -67,15 +67,20 @@
       <% end %>
         </div>
     </div>
+
     <% if user_signed_in? %>
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div id="carouselExampleControls" class="carousel slide my-4" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <p><%= @comments.first.content %></p>
+            <div class="comment-box text-center">
+              <p><%= @comments.first.content %></p>
+            </div>
           </div>
             <% @comments[1..-1].each do |comment| %>
           <div class="carousel-item">
-            <%= comment.content %>
+            <div class="comment-box text-center">
+              <p><%= comment.content %></p>
+            </div>
           </div>
           <% end %>
         </div>
@@ -87,7 +92,7 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-</div>
+      </div>
     <% end %>
 
   <div id="mapview"
