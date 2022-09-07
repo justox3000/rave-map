@@ -14,5 +14,16 @@ a {
 }
 
 input {
-  -webkit-border-radius:0;
+  -webkit-border-radius:0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+}
+
+.swal2-border-radius {
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important; }
+
+.swal2-confirm {
+  border-radius: 0 !important;
 }
