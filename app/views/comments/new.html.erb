@@ -1,6 +1,8 @@
-<h1>Write a Comment</h1>
-<%= simple_form_for [@party, @comment] do |f| %>
-  <%= f.input :content %>
-  <%= f.input :rating %>
-  <%= f.submit "Comment" %>
-<% end %>
+<%= render "shared/navbar" %>
+<main id="main-content">
+  <h1>Write a Comment</h1>
+  <%= simple_form_for [@party, @comment] do |f| %>
+    <%= f.input :content, label: false %>
+    <%= f.submit "Comment", class: "retro-button" %>
+  <% end %>
+</main>

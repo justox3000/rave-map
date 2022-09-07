@@ -1,9 +1,9 @@
 class CommentsController < ApplicationController
-
-before_action :set_party, only:[:new, :create, :index]
+  before_action :set_party, only:[:new, :create, :index]
 
   def index
-    @comments = @party.comments
+    @comments = policy_scope(@party.comments)
+    @comment = Comment.new
   end
 
   def new
@@ -16,10 +16,9 @@ before_action :set_party, only:[:new, :create, :index]
     @comment.user = current_user
     @comment.party = @party
     if @comment.save
-      redirect_to party_path(@party)
+      redirect_to party_comments_path(@party)
     else
-      raise
-      render :new, status: :unprocessable_entity
+      render :index, status: :unprocessable_entity
     end
     authorize @comment
   end
@@ -30,7 +29,6 @@ before_action :set_party, only:[:new, :create, :index]
   end
 
   def comment_params
-    params.require(:comment).permit(:content, :rating)
+    params.require(:comment).permit(:content)
   end
-
 end
