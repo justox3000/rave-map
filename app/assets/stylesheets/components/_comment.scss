@@ -1,3 +1,13 @@
-.comment-content {
+.comment-container {
+  justify-content:center;
   color: white;
+
+}
+
+.user-comment {
+  display: flex;
+
+  .fa-user-alien {
+    width: 20px;
+  }
 }

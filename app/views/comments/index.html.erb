@@ -1,15 +1,20 @@
 <%= render "shared/navbar" %>
 <main id="main-content">
-  <h1>Write a Comment</h1>
-  <%= simple_form_for [@party, @comment] do |f| %>
-    <%= f.input :content, label: false %>
-    <%= f.submit "Comment", class: "retro-button" %>
-  <% end %>
-  <% @comments.each do |comment|%>
-  <p class="comment-content"><%= comment.user.username %></p>
-  <p class="comment-content"><%= comment.created_at.strftime("%m-%e-%y %H:%M") %></p>
-  <p class="comment-content">
-    <%= comment.content %>
-  </p>
-  <% end %>
+  <div class="comment-container">
+    <% @comments.each do |comment|%>
+    <div class="user-comment">
+      <i class="fad fa-user-alien"></i>
+      <p class="comment-content"><%= comment.user.username %></p>
+    <p class="comment-content"><%= comment.created_at.strftime("%m-%e-%y %H:%M") %></p>
+    </div>
+    <p class="comment-content">
+      <%= comment.content %>
+    </p>
+    <% end %>
+    <h1 class="text-align-center">Write a Comment</h1>
+    <%= simple_form_for [@party, @comment] do |f| %>
+      <%= f.input :content, label: false %>
+      <%= f.submit "Comment", class: "retro-button" %>
+    <% end %>
+  </div>
 </main>
