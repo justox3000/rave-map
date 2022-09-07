@@ -1,13 +1,31 @@
 .comment-container {
+  padding: 25px;
   justify-content:center;
   color: white;
 
+  h1 {
+    text-align: center;
+    text-shadow:
+    5px 3px 3px #07e764, 2px 5px 0px #07e764, 5px 3px 21px #07e764
+  }
+
+  .retro-button {
+    justify-content: end;
+  }
 }
 
 .user-comment {
-  display: flex;
+    box-shadow:
+    -1px 2px 0px #07e764, 0px -1px 0px #07e764, 5px 3px 5px #07e764;
 
-  .fa-user-alien {
-    width: 20px;
+  .comment-user-time {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    align-items: center;
+  }
+
+  .comment-text {
+    font-size: 15px;
   }
 }
