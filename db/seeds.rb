@@ -1,3 +1,6 @@
+# TODO: MORE Parties
+# TODO: More Comments
+
 require 'open-uri'
 
 puts "Deleting the old Database..."
