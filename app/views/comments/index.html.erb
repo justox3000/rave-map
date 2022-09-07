@@ -1,20 +1,24 @@
 <%= render "shared/navbar" %>
 <main id="main-content">
   <div class="comment-container">
-    <% @comments.each do |comment|%>
-    <div class="user-comment">
-      <i class="fad fa-user-alien"></i>
-      <p class="comment-content"><%= comment.user.username %></p>
-    <p class="comment-content"><%= comment.created_at.strftime("%m-%e-%y %H:%M") %></p>
-    </div>
-    <p class="comment-content">
-      <%= comment.content %>
-    </p>
-    <% end %>
-    <h1 class="text-align-center">Write a Comment</h1>
+    <h1 class="mb-4">Write a Comment</h1>
     <%= simple_form_for [@party, @comment] do |f| %>
       <%= f.input :content, label: false %>
-      <%= f.submit "Comment", class: "retro-button" %>
+        <div class="d-flex justify-content-end">
+      <%= f.submit "Comment", class: "retro-button px-2" %>
+      </div>
+    <% end %>
+    <% @comments.each do |comment|%>
+    <div class="user-comment mt-4 p-2 border border-white">
+      <%# <i class="fad fa-user-alien"></i> %>
+      <div class="comment-user-time border-bottom">
+         <p class="comment-content"><i class="fal fa-user-alien"></i><%= comment.user.username %></p>
+          <p class="comment-content font-weight-light"><%= comment.created_at.strftime("%m-%e-%y %H:%M") %></p>
+      </div>
+        <div class="comment-text">
+          <%= comment.content %>
+        </div>
+    </div>
     <% end %>
   </div>
 </main>
