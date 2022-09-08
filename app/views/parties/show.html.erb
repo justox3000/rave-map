@@ -74,10 +74,10 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="comment-box text-center">
-                <p><%= @comments.first.content %></p>
+                <p>"<%= @comments.first.content %>"</p>
               </div>
             </div>
-              <% @comments[1..-1].each do |comment| %>
+              <p>"<% @comments[1..-1].each do |comment| %>"</p>
             <div class="carousel-item">
               <div class="comment-box text-center">
                 <p><%= comment.content %></p>
