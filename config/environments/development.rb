@@ -59,6 +59,9 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
+  config.hosts << "rave-map.herokuapp.com"
+  config.hosts << "www.rave-map.xyz"
+
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
   # Annotate rendered view with file names.

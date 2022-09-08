@@ -57,7 +57,8 @@ Rails.application.configure do
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
-  config.hosts << "49b1-2a02-8071-5070-5260-84c9-103a-7796-5dfc.eu.ngrok.io"
+  config.hosts << "rave-map.herokuapp.com"
+  config.hosts << "www.rave-map.xyz"
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "_rave_map_production"
