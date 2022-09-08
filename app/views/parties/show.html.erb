@@ -2,7 +2,7 @@
 <%= render "shared/navbar" %>
 <%= render "shared/search_form" %>
 <div class="card-show-container">
-  <h1><%= @party.title %></h1>
+  <h1 class="mb-3"><%= @party.title %></h1>
   <%= cl_image_tag @party.photo.key, width: 800, crop: :fit, class: "rounded" %>
     <div class="edit">
       <div class="edit2">
@@ -57,7 +57,7 @@
         <div data-controller="readmore">
           <div data-readmore-target="hideable">
             <p><%= @party.description[0..249] %></p>
-            <div class="d-flex justify-content-end">
+            <div class="d-flex justify-content-end mb-2">
               <a class="retro-button px-2" role="button" data-action="readmore#hidden">
               read more
               </a>
