@@ -2,5 +2,5 @@
 meta_product_name: "Rave Map"
 meta_title: "Rave Map - Never miss a good rave"
 meta_description: "Find Raves near by"
-meta_image: "Abstract_moving.gif" # should exist in `app/assets/images/`
+meta_image: "green.png" # should exist in `app/assets/images/`
 # twitter_account: "@product_twitter_account"   # required for Twitter Cards
