@@ -8,7 +8,7 @@
       <%= f.submit "Comment", class: "retro-button px-2" %>
       </div>
     <% end %>
-    <% @comments.each do |comment|%>
+    <% @comments.reverse.each do |comment|%>
     <div class="user-comment mt-4 p-2 border border-white">
       <div class="comment-user-time border-bottom">
       <p class="comment-content"><i class="fa-solid fa-skull me-2"></i><%= comment.user.username %></p>
