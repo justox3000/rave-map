@@ -66,8 +66,8 @@
           <div data-readmore-target="hideable" hidden>
             <p><%= @party.description %></p>
           </div>
-      <% end %>
         </div>
+      <% end %>
     </div>
 
     <% if user_signed_in? %>
@@ -76,16 +76,16 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="comment-box text-center">
-                <p>"<%= @comments.first.content %>"</p>
+                <p>" <%= @comments.first.content %> "</p>
               </div>
             </div>
-              <p>"<% @comments[1..-1].each do |comment| %>"</p>
+             <% @comments[1..-1].each do |comment| %>
             <div class="carousel-item">
               <div class="comment-box text-center">
-                <p><%= comment.content %></p>
+                <p>" <%= comment.content %> "</p>
               </div>
             </div>
-            <% end %>
+              <% end %>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
