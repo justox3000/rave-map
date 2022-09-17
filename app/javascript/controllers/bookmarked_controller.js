@@ -19,12 +19,16 @@ export default class extends Controller {
         confirmButtonText: 'Cool',
         confirmButtonColor: '#07E764',
         customClass: { popup: "swal2-border-radius" }
-      })
-      this.element.reload()
-    } else {
-      this.bookmarkTarget.classList.remove("fa-solid")
-      this.bookmarkTarget.classList.add("fa-regular")
-      this.element.reload()
+      }),
+      function(){
+        location.reload();
+      }
+    //   this.element.reload()
+    // } else {
+    //   this.bookmarkTarget.classList.remove("fa-solid")
+    //   this.bookmarkTarget.classList.add("fa-regular")
+    //   this.element.reload()
+    // }
     }
   }
 }
