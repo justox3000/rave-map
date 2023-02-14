@@ -1,5 +1,4 @@
 ![RAVE MAP Logo](/app/assets/images/green.png)
----
 
 # Rave Map
 
@@ -9,6 +8,7 @@
 ## Never Miss A Good Rave
 
 The design is inspired by flyers of old rave parties of the origin underground techno scene.
+---
 
 [RAVE MAP](https://rave-map.herokuapp.com/) "Never Miss A Good Rave" *For full experience, please resize your browser to mobile screen relations!*
 
