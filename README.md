@@ -1,9 +1,10 @@
+![RAVE MAP Logo](/app/assets/images/green.png)
+---
+
 # Rave Map
 
 - 🪩 Mobile application to discover techno events with a map.
 - 📌 As a registered user you can create events, comment on them and bookmark them in a personal calendar. 
-
-![RAVE MAP Logo](/app/assets/images/green.png)
 
 ## Never Miss A Good Rave
 
