@@ -1,6 +1,7 @@
 # Rave Map
 
-Mobile application to discover techno events with a map. As a registered user you can create events, comment on them and bookmark them in a personal calendar. 
+- 🪩 Mobile application to discover techno events with a map.
+- 📌 As a registered user you can create events, comment on them and bookmark them in a personal calendar. 
 
 ## Never Miss A Good Rave
 
