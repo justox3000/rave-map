@@ -4,6 +4,7 @@ import { Calendar } from "@toast-ui/calendar";
 export default class extends Controller {
   connect() {
     const container = document.getElementById('calendar');
+    clg(container);
     const options = {
       defaultView: 'week',
       timezone: {
